@@ -1,0 +1,376 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+* {
+	padding:0;
+	margin:0;
+	border:none;
+}
+
+
+  	p,
+  	span {
+  		font-family:Verdana, sans-serif;
+  		font-size:14px;
+  	}
+
+		
+	.yellow {
+		background-color:#ebe18c;
+		border-color:#ebe18c;
+
+	}
+	
+	.red {
+		background-color:#dc3f1c;
+		border-color:#dc3f1c;
+	}
+	
+	.petrol {
+		background-color:#448d7a;
+		border-color:#448d7a;
+	}
+	
+	.sand {
+		background-color:#d8a027;
+		border-color:#d8a027;
+	}
+	
+	.green {
+		background-color:#88a764;
+		border-color:#88a764;
+	}
+	
+	/******************************************/
+	/***************** ribbon *****************/
+	/******************************************/
+	
+	.ribbon {
+		display:inline-block;
+		margin:40px;
+		position:relative;
+		width:25%;
+		top:30px;
+		left:30px;	
+	}
+	
+	/***********************************************/
+	/***************** ribbon_text *****************/	
+	/***********************************************/
+	
+	.ribbon_text {
+		display:inline-block;
+		background-color:#66CDAA;
+		color:white;
+		letter-spacing:2px;
+		font-weight:bold;
+		position:absolute;
+		left:-10px;
+		top:20px;
+		border-radius:0 4px 4px 0;
+		z-index:666;
+	}
+	
+	.ribbon_text.left {
+		padding:4% 4% 4% 11%;
+	}
+	
+	.ribbon_text.right {	
+		padding:4% 11% 4% 4%;
+		right:-10px;
+		border-radius:4px 0px 0 4px;
+		z-index:666;
+		text-align:right;
+	}
+	
+	.ribbon_text.big {
+		width:100%;
+	}
+	.ribbon_text.big.left {
+			padding-right:0;
+		}
+	
+	.ribbon_text.big.right {
+			padding-left:0;
+		}
+	
+	.ribbon_text.both {
+		border-radius:0;
+		padding:4% 0;	
+		text-align:center;
+		width:calc(100% + 20px);
+		}
+		
+	.ribbon_text.both.left {
+		text-align:left;
+		padding-left:11%;
+		width:calc(89% + 20px);
+	}
+	
+	.ribbon_text.both.right {
+		text-align:right;
+		padding-right:11%;
+		width:calc(89% + 20px);
+	}
+
+	/********************************************************/
+	/***************** ribbon_text dreiecke *****************/
+	/********************************************************/
+	
+	.ribbon_text:before {
+		content:'';
+		width:0;
+		height:0;
+		position:absolute;
+		left:0;
+		bottom:-12px;
+		border-right: 0px solid transparent;
+  		border-left: 10px solid transparent;
+		
+	}
+	
+	.ribbon_text.right:before
+   {
+		left:calc(100% - 10px);
+		border-left: 0px solid transparent;
+  		border-right: 10px solid transparent;	
+	}
+	
+	 .ribbon_text.both:after {
+	 	content:'';
+		width:0;
+		height:0;
+		position:absolute;
+		right:0;
+		bottom:-12px;
+		border-right: 10px solid transparent;
+  		border-left: 00px solid transparent;
+
+	 }		
+	
+	/**************************************************************/
+	/***************** ribbon_text dreieck farben *****************/
+	/**************************************************************/
+		
+	.ribbon_text.yellow:before,
+	.ribbon_text.yellow.both:after
+	{
+		 border-top:12px solid #D4CA7E;
+	}
+	
+	.ribbon_text.red:before,
+	 .ribbon_text.red.both:after
+	{
+		 border-top:12px solid #B03216;
+	}
+
+	.ribbon_text.petrol:before,
+	 .ribbon_text.petrol.both:after{
+		 border-top:12px solid #306355;
+	}
+
+	.ribbon_text.sand:before,
+	 .ribbon_text.sand.both:after{
+		 border-top:12px solid #AD801F;
+	}
+
+	.ribbon_text.green:before,
+	 .ribbon_text.green.both:after{
+		 border-top:12px solid #6D8650;
+	}
+
+	/**********************************************/
+	/***************** ribbon_box *****************/
+	/**********************************************/
+	
+	.ribbon_box{
+		background-color:white;
+		padding:0 7% 7% 7%;
+		padding-top:calc(19% + 1.5em);
+		border:1px solid #9EB8A9;
+		border-radius:4px;
+		box-shadow:1.5px 1.5px 1px #ccc;
+		line-height:1.5em;		
+	}
+		
+	.ribbon_box.right {
+		text-align:right;
+	}
+		
+	 .ribbon_box.left {
+		text-align:left;
+	}
+
+	.ribbon_box.center {
+		text-align:center;
+	}
+
+	.ribbon_box.justify {
+		text-align:justify;
+	}
+	
+	
+	/******************************************/
+	/***************** farben *****************/
+	/******************************************/
+
+	.yellow {
+		background-color:#ebe18c !important;
+	}
+	
+	.red {
+		background-color:#dc3f1c !important;
+	}
+	
+	.petrol {
+		background-color:#448d7a !important;	
+	}
+	
+	.sand {
+		background-color:#d8a027 !important;	
+	}
+	
+	.green {
+		background-color:#88a764 !important;		
+	}
+	
+	.yellow_border {
+		border-color:#ebe18c !important;
+	}
+	
+	.red_border {
+		border-color:#dc3f1c !important;
+	}
+	
+	.petrol_border {
+		border-color:#448d7a !important;	
+	}
+	
+	.sand_border {
+		border-color:#d8a027 !important;	
+	}
+	
+	.green_border {
+		border-color:#88a764 !important;		
+	}
+	
+	
+
+		
+</style>
+
+</head>
+<body>
+<div class="wrapper">
+	<div class="ribbon">
+		<span class="ribbon_text left yellow">
+		 	.left.yellow
+		</span>
+		<p class="ribbon_box left yellow_border">
+			Klassenvergabe:</br>
+			span: .left.yellow</br> 
+			p: left.yellow_border</br>
+			
+		</p>
+	</div>
+	
+	<div class="ribbon">
+		<span class="ribbon_text right red">
+			 .right.red
+		</span>
+		<p class="ribbon_box right red_border">
+			Klassenvergabe:</br>
+			span: .right.red</br> 
+			p: .right.red_border</br>
+		</p>
+	</div>
+	
+	<div class="ribbon">
+		<span class="ribbon_text big right petrol">
+			.big.right.petrol
+		</span>
+		<p class="ribbon_box right petrol_border">
+			Klassenvergabe:</br>
+			span: .big.right.petrol</br> 
+			p: right.petrol_border</br>
+
+		</p>
+	</div>
+
+	<div class="ribbon">
+		<span class="ribbon_text big left sand">
+			.big.left.sand
+		</span>
+		<p class="ribbon_box left sand_border">
+			Klassenvergabe:</br>
+			span: .big.left.sand</br> 
+			p: left.sand_border</br>
+
+		</p>
+	</div>
+	
+	<div class="ribbon">
+		<span class="ribbon_text both green">
+			.both.green
+		</span>
+		<p class="ribbon_box both green_border">
+			Klassenvergabe:</br>
+			span: .both.green</br> 
+			p: .big.both.green_border</br>
+
+		</p>
+	</div>
+	
+	<div class="ribbon ">
+		<span class="ribbon_text both yellow">
+			.both.yellow
+		</span>
+		<p class="ribbon_box sand_border petrol">
+			Klassenvergabe:</br>
+			span: .both.yellow</br> 
+			p: .big.sand_border</br>
+
+		</p>
+	</div>
+	
+	<div class="ribbon">
+		<span class="ribbon_text left both red">
+			.left.both.red
+		</span>
+		<p class="ribbon_box justify green_border">
+			Klassenvergabe:</br>
+			span: .left.both.red</br> 
+			p: .justify.green_border</br>
+
+		</p>
+	</div>
+	
+	<div class="ribbon ">
+		<span class="ribbon_text right sand">
+			.right.sand
+		</span>
+		<p class="ribbon_box center yellow sand_border">
+			Klassenvergabe:</br>
+			span: .right.sand</br> 
+			p: .center.yellow.sand_border</br>
+
+		</p>
+	</div>
+
+	<div class="ribbon ">
+		<span class="ribbon_text left petrol">
+			.left.petrol
+		</span>
+		<p class="ribbon_box right petrol_border">
+			Klassenvergabe:</br>
+			span: .left.petrol</br> 
+			p: .right.petrol_border</br>
+
+		</p>
+	</div>
+	
+	</div>
+</body>
+</html>
